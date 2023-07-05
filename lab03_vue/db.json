@@ -1,0 +1,64 @@
+{
+ "passengers":[
+    {
+      "id": 1,
+      "first_name": "Tiler",
+      "last_name": "Peile",
+      "email": "tpeile0@ycombinator.com",
+      "gender": "Male",
+      "ip_address": "176.3.147.168",
+      "Source": "Oshnavīyeh",
+      "Destination": "Caobi",
+      "travelDate": "6/16/2022",
+      "airlineId": 2
+    },
+    {
+      "id": 2,
+      "first_name": "Ernesta",
+      "last_name": "Lufkin",
+      "email": "elufkin1@1688.com",
+      "gender": "Female",
+      "ip_address": "253.183.250.13",
+      "Source": "Tílisos",
+      "Destination": "Seso",
+      "travelDate": "4/30/2022",
+      "airlineId": 7
+    },
+    {
+      "id": 3,
+      "first_name": "Rooney",
+      "last_name": "Jozefczak",
+      "email": "rjozefczak2@networksolutions.com",
+      "gender": "Male",
+      "ip_address": "166.217.9.183",
+      "Source": "Verkhniye Osel’ki",
+      "Destination": "Tulu Bolo",
+      "travelDate": "10/17/2021",
+      "airlineId": 7
+    },
+    {
+      "id": 4,
+      "first_name": "Neil",
+      "last_name": "Dodson",
+      "email": "ndodson3@reddit.com",
+      "gender": "Agender",
+      "ip_address": "226.83.136.232",
+      "Source": "Ekou",
+      "Destination": "Dishnā",
+      "travelDate": "7/23/2022",
+      "airlineId": 4
+    },
+    {
+      "id": 5,
+      "first_name": "Yankee",
+      "last_name": "Slane",
+      "email": "yslane4@ameblo.jp",
+      "gender": "Male",
+      "ip_address": "109.252.61.135",
+      "Source": "Mangge",
+      "Destination": "Zhulebino",
+      "travelDate": "11/12/2021",
+      "airlineId": 4
+    }
+  ]
+}
