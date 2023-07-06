@@ -348,5 +348,49 @@
     "travelDate": "9/9/2021",
     "airlineId": 6
   }
+],
+ "airlines":[
+  {
+    "id": 1,
+    "AirlineName": "Tillman-Prohaska Airline",
+    "email": "slebarree0@psu.edu",
+    "address": "12218 Evergreen Terrace"
+  },
+  {
+    "id": 2,
+    "AirlineName": "Walter-Jenkins Airline",
+    "email": "epartridge1@nytimes.com",
+    "address": "24 Saint Paul Way"
+  },
+  {
+    "id": 3,
+    "AirlineName": "Grant-Kuphal Airline",
+    "email": "rcandy2@miibeian.gov.cn",
+    "address": "95967 Corscot Junction"
+  },
+  {
+    "id": 4,
+    "AirlineName": "McCullough-Renner Airline",
+    "email": "wtheodoris3@ihg.com",
+    "address": "5 Daystar Junction"
+  },
+  {
+    "id": 5,
+    "AirlineName": "Stark-Stracke Airline",
+    "email": "fghiroldi4@photobucket.com",
+    "address": "1768 Pawling Junction"
+  },
+  {
+    "id": 6,
+    "AirlineName": "Bergstrom, Dibbert and Feest Airline",
+    "email": "gdukes5@skyrock.com",
+    "address": "3873 Scofield Drive"
+  },
+  {
+    "id": 7,
+    "AirlineName": "Haley Group Airline",
+    "email": "pkrook6@usa.gov",
+    "address": "650 Vermont Road"
+  }
 ]
 }

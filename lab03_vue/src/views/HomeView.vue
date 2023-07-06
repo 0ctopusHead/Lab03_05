@@ -14,7 +14,7 @@ const props = defineProps({
   }
 })
 watchEffect(() =>{
-PassengerService.getPassenger(5, props.page).then((respond:AxiosResponse<Passenger_Lists[]>)=>{
+PassengerService.getEvent(5, props.page).then((respond:AxiosResponse<Passenger_Lists[]>)=>{
   passengers.value = respond.data
   totalPassenger.value = respond.headers['x-total-count']
 })

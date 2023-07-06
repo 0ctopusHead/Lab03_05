@@ -8,5 +8,7 @@ export interface Passenger_Lists{
     Source: string
     Destination: string
     travelDate: string
-    airlineID: number
+    airlineId: number
+    AirlineName: string
+    address: string
 }
