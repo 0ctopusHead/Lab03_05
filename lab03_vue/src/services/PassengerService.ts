@@ -12,7 +12,7 @@ const apiClient : AxiosInstance = axios.create({
 })
 
 export default({
-    getPassenger(): Promise<AxiosResponse<Passenger_Lists[]>>{
-        return apiClient.get<Passenger_Lists[]>('/passengers')
+    getPassenger(perPage: Number, page: Number): Promise<AxiosResponse<Passenger_Lists[]>>{
+        return apiClient.get<Passenger_Lists[]>('/passengers?_limit='+perPage+'&_page='+page)
     }
 })
