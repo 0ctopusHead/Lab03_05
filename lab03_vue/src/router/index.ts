@@ -71,7 +71,7 @@ const router = createRouter({
       ]
     },
     {
-      path: '/404/:resouce',
+      path: '/404/:resource',
       name: '404-resource',
       component: NotFoundView,
       props: true
