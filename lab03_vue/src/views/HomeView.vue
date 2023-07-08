@@ -2,9 +2,11 @@
 import PassengerCard from '../components/PassengerCard.vue';
 import type { Passenger_Lists } from '@/list';
 import type { Ref } from 'vue';
-import { computed, ref, watchEffect } from 'vue';
+import { computed, ref} from 'vue';
 import PassengerService from '@/services/PassengerService';
 import type { AxiosResponse } from 'axios';
+import { onBeforeRouteUpdate, useRouter } from 'vue-router';
+const router = useRouter()
 const passengers: Ref<Array<Passenger_Lists>> = ref([])
 const totalPassenger =  ref<number>(0)
 const props = defineProps({
@@ -13,12 +15,24 @@ const props = defineProps({
     required : true
   }
 })
-watchEffect(() =>{
+
 PassengerService.getEvent(5, props.page).then((respond:AxiosResponse<Passenger_Lists[]>)=>{
   passengers.value = respond.data
   totalPassenger.value = respond.headers['x-total-count']
+}).catch(() =>{
+    router.push({name: 'network-error'})
 })
+onBeforeRouteUpdate((to,from,next) => {
+  const toPage = Number(to.query.page)
+  PassengerService.getEvent(5, toPage).then((respond:AxiosResponse<Passenger_Lists[]>) =>{
+    passengers.value = respond.data
+    totalPassenger.value = respond.headers['x-total-count']
+    next()
+  }).catch(() =>{
+    next({name: 'network-error'})
+  })
 })
+
 const hasNextPage = computed(() => {
   const totalPages = Math.ceil(totalPassenger.value / 5)
   return props.page.valueOf() < totalPages
