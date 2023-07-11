@@ -59,7 +59,7 @@ const router = createRouter({
           component: PassengerDetailView
         },
         {
-          path: 'airline/:id',
+          path: 'airline/',
           name: 'airline-detail',
           component: EventAirlineView
         },
@@ -87,12 +87,15 @@ const router = createRouter({
       component: NetworkErrorView
     }
   ],
-  scrollBehavior(to, from , savePosition) {
-    if(savePosition) {
-      return savePosition
+  scrollBehavior(to, from , savedPosition) {
+    if(savedPosition) {
+      return savedPosition
+      console.log('in if', savedPosition)
     } else{
-      return {top: 0}
+      return {top:0}
+      console.log('in else',savedPosition)
     }
+    console.log('outside',savedPosition)
   }
 })
 router.beforeEach(() => {

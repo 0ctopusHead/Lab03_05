@@ -16,7 +16,7 @@ const props = defineProps({
   }
 })
 
-PassengerService.getEvent(5, props.page).then((respond:AxiosResponse<Passenger_Lists[]>)=>{
+PassengerService.getEvent(10, props.page).then((respond:AxiosResponse<Passenger_Lists[]>)=>{
   passengers.value = respond.data
   totalPassenger.value = respond.headers['x-total-count']
 }).catch(() =>{
@@ -24,7 +24,7 @@ PassengerService.getEvent(5, props.page).then((respond:AxiosResponse<Passenger_L
 })
 onBeforeRouteUpdate((to,from,next) => {
   const toPage = Number(to.query.page)
-  PassengerService.getEvent(5, toPage).then((respond:AxiosResponse<Passenger_Lists[]>) =>{
+  PassengerService.getEvent(10, toPage).then((respond:AxiosResponse<Passenger_Lists[]>) =>{
     passengers.value = respond.data
     totalPassenger.value = respond.headers['x-total-count']
     next()
@@ -34,7 +34,7 @@ onBeforeRouteUpdate((to,from,next) => {
 })
 
 const hasNextPage = computed(() => {
-  const totalPages = Math.ceil(totalPassenger.value / 5)
+  const totalPages = Math.ceil(totalPassenger.value / 10)
   return props.page.valueOf() < totalPages
 })
 </script>
