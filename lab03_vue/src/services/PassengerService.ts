@@ -3,7 +3,7 @@ import type { AxiosInstance, AxiosResponse } from 'axios'
 import type { Passenger_Lists } from '@/list'
 
 const apiClient: AxiosInstance = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/se331-2022/passengerdb',
+  baseURL: 'http://localhost:3004',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -13,12 +13,12 @@ const apiClient: AxiosInstance = axios.create({
 
 export default {
   getEvent(perPage: number, page: number): Promise<AxiosResponse<Passenger_Lists[]>> {
-    return apiClient.get<Passenger_Lists[]>('/passenger?_page=' + page + '&_limit=' + perPage)
+    return apiClient.get<Passenger_Lists[]>('/passengers?_page=' + page + '&_limit=' + perPage)
   },
   getEventById(id: number): Promise<AxiosResponse<Passenger_Lists>> {
-    return apiClient.get<Passenger_Lists>('passenger/' + id.toString())
+    return apiClient.get<Passenger_Lists>('passengers/' + id.toString())
   },
   getAirlineById(id: number): Promise<AxiosResponse<Passenger_Lists>> {
-    return apiClient.get<Passenger_Lists>('airline/' + id.toString())
+    return apiClient.get<Passenger_Lists>('airlines/' + id.toString())
   }
 }
